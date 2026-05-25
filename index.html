@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hala Khrdok ❤️</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Cairo", sans-serif;
+
+        overflow: hidden;
+
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: linear-gradient(-45deg, #ff758c, #ff7eb3, #fad0c4, #ff9a9e);
+
+        background-size: 400% 400%;
+
+        animation: gradientBG 12s ease infinite;
+
+        position: relative;
+      }
+
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* INTRO */
+
+      .cinemaIntro {
+        position: fixed;
+
+        inset: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: black;
+
+        overflow: hidden;
+
+        z-index: 99999;
+
+        animation: introFadeOut 2s forwards;
+
+        animation-delay: 6s;
+      }
+
+      .cinemaBackground {
+        position: absolute;
+
+        inset: 0;
+
+        background: radial-gradient(
+          circle at center,
+          rgba(255, 80, 120, 0.18),
+          rgba(0, 0, 0, 0.95) 70%
+        );
+
+        animation: bgPulse 8s infinite ease-in-out;
+      }
+
+      .particles::before,
+      .particles::after {
+        content: "";
+
+        position: absolute;
+
+        width: 200%;
+        height: 200%;
+
+        background-image: radial-gradient(white 1px, transparent 1px);
+
+        background-size: 50px 50px;
+
+        opacity: 0.08;
+
+        animation: moveParticles 25s linear infinite;
+      }
+
+      .introCenter {
+        position: relative;
+
+        text-align: center;
+
+        z-index: 2;
+
+        animation: introZoom 3s ease;
+      }
+
+      .cinemaTitle {
+        font-family: "Great Vibes", cursive;
+
+        font-size: 110px;
+
+        color: white;
+
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+          0 0 40px rgba(255, 80, 120, 0.8), 0 0 80px rgba(255, 80, 120, 0.6);
+
+        animation: titleGlow 3s infinite alternate;
+      }
+
+      .heartLine {
+        margin-top: 10px;
+
+        font-size: 40px;
+
+        animation: heartBeat 1.5s infinite;
+      }
+
+      .cinemaText {
+        margin-top: 25px;
+
+        color: rgba(255, 255, 255, 0.85);
+
+        font-size: 24px;
+      }
+
+      @keyframes introFadeOut {
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      @keyframes bgPulse {
+        0% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.08);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes titleGlow {
+        from {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+            0 0 40px rgba(255, 80, 120, 0.7);
+        }
+
+        to {
+          text-shadow: 0 0 30px rgba(255, 255, 255, 1),
+            0 0 70px rgba(255, 120, 160, 1);
+        }
+      }
+
+      @keyframes heartBeat {
+        0% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.25);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes introZoom {
+        from {
+          opacity: 0;
+          transform: scale(0.7);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes moveParticles {
+        from {
+          transform: translateY(0);
+        }
+
+        to {
+          transform: translateY(-300px);
+        }
+      }
+
+      /* CARD */
+
+      .container {
+        width: 90%;
+
+        max-width: 700px;
+
+        padding: 40px;
+
+        border-radius: 30px;
+
+        background: rgba(255, 255, 255, 0.15);
+
+        backdrop-filter: blur(12px);
+
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+        text-align: center;
+
+        position: relative;
+
+        z-index: 10;
+
+        animation: fadeUp 1.5s ease;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .title {
+        font-family: "Great Vibes", cursive;
+
+        font-size: 65px;
+
+        color: white;
+
+        margin-bottom: 10px;
+
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff4f81, 0 0 40px #ff4f81;
+
+        animation: glowText 2s ease-in-out infinite alternate;
+      }
+
+      .subtitle {
+        color: white;
+
+        font-size: 24px;
+
+        margin-bottom: 20px;
+      }
+
+      .message {
+        color: white;
+
+        font-size: 28px;
+
+        line-height: 1.8;
+
+        margin-bottom: 25px;
+
+        min-height: 100px;
+
+        transition: opacity 0.6s ease;
+      }
+
+      .days {
+        font-size: 24px;
+
+        color: white;
+
+        margin-bottom: 25px;
+
+        font-weight: 600;
+
+        line-height: 1.8;
+      }
+
+      button {
+        padding: 15px 40px;
+
+        border: none;
+
+        border-radius: 50px;
+
+        background: #ff3366;
+
+        color: white;
+
+        font-size: 18px;
+
+        cursor: pointer;
+
+        transition: 0.4s;
+
+        box-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
+      }
+
+      button:hover {
+        transform: scale(1.08);
+
+        box-shadow: 0 0 35px rgba(255, 51, 102, 0.9);
+      }
+
+      .hiddenMessage {
+        margin-top: 30px;
+
+        color: white;
+
+        font-size: 24px;
+
+        display: none;
+
+        animation: fadeText 1s ease;
+      }
+
+      @keyframes fadeText {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes glowText {
+        from {
+          text-shadow: 0 0 10px #fff, 0 0 20px #ff4f81, 0 0 30px #ff4f81;
+        }
+
+        to {
+          text-shadow: 0 0 20px #fff, 0 0 40px #ff85a2, 0 0 60px #ff85a2;
+        }
+      }
+
+      /* HEARTS */
+
+      .heart {
+        position: absolute;
+
+        pointer-events: none;
+
+        animation: float 6s linear forwards;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+
+          opacity: 1;
+        }
+
+        100% {
+          transform: translateY(-100vh);
+
+          opacity: 0;
+        }
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 700px) {
+        .title {
+          font-size: 45px;
+        }
+
+        .message {
+          font-size: 18px;
+        }
+
+        .days {
+          font-size: 18px;
+        }
+
+        .cinemaTitle {
+          font-size: 70px;
+        }
+
+        .cinemaText {
+          font-size: 18px;
+          padding: 0 20px;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- INTRO -->
+
+    <div class="cinemaIntro">
+      <div class="cinemaBackground"></div>
+
+      <div class="particles"></div>
+
+      <div class="introCenter">
+        <h1 class="cinemaTitle">Hala Khrdok</h1>
+
+        <div class="heartLine">❤️</div>
+
+        <p class="cinemaText">TO THE MOST BEAUTIFUL GIRL ❤️✨</p>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+
+    <div class="container">
+      <h1 class="title">Hala Khrdok ❤️</h1>
+
+      <p class="subtitle">Since 25 / 4 ✨</p>
+
+      <p class="message" id="typing"></p>
+
+      <div class="days" id="daysTogether"></div>
+
+      <button onclick="showLove()">CLICK HERE SWEETHEART ❤️</button>
+
+      <div class="hiddenMessage" id="loveMessage">
+        ROSES ARE RED 🌹❤️ VIOLETS ARE BLUE 💙 NOBODY IS GONNA LOVE U THE WAY I
+        DO ❤️
+      </div>
+    </div>
+
+    <!-- MUSIC -->
+
+    <audio id="music" autoplay loop preload="auto">
+      <source
+        src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=romantic-piano-110624.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+
+    <script>
+      /* ROMANTIC MESSAGES */
+
+      const messages = [
+        "Every moment with you feels magical ❤️",
+
+        "You are the most beautiful part of my life ✨",
+
+        "My heart smiles whenever I think about you 🌹",
+
+        "You make my world softer and brighter 💖",
+
+        "Forever is beautiful because you are in it ❤️",
+      ];
+
+      let messageIndex = 0;
+
+      let charIndex = 0;
+
+      const typingElement = document.getElementById("typing");
+
+      function typeMessages() {
+        const currentMessage = messages[messageIndex];
+
+        if (charIndex < currentMessage.length) {
+          typingElement.innerHTML += currentMessage.charAt(charIndex);
+
+          charIndex++;
+
+          setTimeout(typeMessages, 50);
+        } else {
+          setTimeout(() => {
+            typingElement.style.opacity = "0";
+
+            setTimeout(() => {
+              typingElement.innerHTML = "";
+
+              charIndex = 0;
+
+              messageIndex++;
+
+              if (messageIndex >= messages.length) {
+                messageIndex = 0;
+              }
+
+              typingElement.style.opacity = "1";
+
+              typeMessages();
+            }, 600);
+          }, 2500);
+        }
+      }
+
+      typeMessages();
+
+      /* HEARTS */
+
+      function createHeart(x, y) {
+        const heart = document.createElement("div");
+
+        heart.classList.add("heart");
+
+        heart.innerHTML = "❤️";
+
+        heart.style.left = x + "px";
+
+        heart.style.top = y + "px";
+
+        heart.style.fontSize = Math.random() * 20 + 20 + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 6000);
+      }
+
+      setInterval(() => {
+        createHeart(Math.random() * window.innerWidth, window.innerHeight);
+      }, 300);
+
+      /* BUTTON */
+
+      function showLove() {
+        document.getElementById("loveMessage").style.display = "block";
+
+        for (let i = 0; i < 30; i++) {
+          setTimeout(() => {
+            createHeart(window.innerWidth / 2, window.innerHeight / 2);
+          }, i * 100);
+        }
+      }
+
+      /* LIVE COUNTER */
+
+      const firstDate = new Date("2026-04-25T00:00:00");
+
+      function updateLoveTime() {
+        const now = new Date();
+
+        const diff = now - firstDate;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+        const hours = Math.floor(
+          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById(
+          "daysTogether"
+        ).innerHTML = `❤️ ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds Together ❤️`;
+      }
+
+      updateLoveTime();
+
+      setInterval(updateLoveTime, 1000);
+
+      /* MOUSE HEARTS */
+
+      window.addEventListener("mousemove", (e) => {
+        createHeart(e.clientX, e.clientY);
+      });
+
+      /* MUSIC */
+
+      window.addEventListener("load", async () => {
+        const music = document.getElementById("music");
+
+        music.volume = 0.5;
+
+        try {
+          await music.play();
+        } catch (err) {
+          const startMusic = () => {
+            music.play();
+
+            document.removeEventListener("click", startMusic);
+
+            document.removeEventListener("touchstart", startMusic);
+          };
+
+          document.addEventListener("click", startMusic);
+
+          document.addEventListener("touchstart", startMusic);
+        }
+      });
+    </script>
+  </body>
+</html>
